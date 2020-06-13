@@ -1,0 +1,22 @@
+{
+  "name": "node_basics",
+  "version": "1.0.0",
+  "description": "Learning node js basics",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kirankishore17/node-basics.git"
+  },
+  "author": "kirankishore",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kirankishore17/node-basics/issues"
+  },
+  "homepage": "https://github.com/Kirankishore17/node-basics#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
