@@ -1,9 +1,12 @@
 const express = require('express');
-
+const Product = require('../model/product');
+const mongoose = require('mongoose')
 const app = express();
 
+console.log('products.....................')
 // Return Products
 app.get('/', (req, res) => {
+    console.log('get product')
     res.status(200).json({
         message: " get product/"
     })
@@ -11,8 +14,18 @@ app.get('/', (req, res) => {
 
 // Add new Product
 app.post('/', (req, res) => {
+    const product = new Product({
+        _id: new mongoose.Types.ObjectId(),
+        name: req.body.name,
+        price : req.body.price
+    });
+    product
+        .save()
+        .then(result => console.log(result))
+        .catch(err => console.log(err));
     res.status(200).json({
-        message: " post product/"
+        message: " post product/",
+        productName: product.name
     })
 })
 
